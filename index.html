@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>下拉选择国家和国旗</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/select_gj.css">
+    <style>
+       .country {
+        width: 248px;
+        border-radius: 5px;
+        padding: 0 0 50px;
+        position: relative;
+    }
+
+    .select2-selection__rendered {
+        text-align: center;
+    }
+
+    .select2-container--default .select2-selection {
+        padding-top: 0;
+    }
+
+    .huobi {
+        position: absolute;
+        top: 5px;
+        right: 8%;
+        text-align: center;
+        display: inline-block;
+        background-color: #fff;
+        z-index: 1111;
+        padding: 0 5px;
+        color: red;
+        font-size: 20px;
+    }
+    </style>
+</head>
+
+
+<body>
+    <div class="country">
+        <select name="country" class="fastbannerform__country">
+            <option value="AC" title="AC" >America</option>
+            <option value="AD" title="AD" >Andorra</option>
+            <option value="AE" title="AE" >United Arab Emirates</option>
+            <option value="AF" title="AF" >Afghanistan</option>
+            <option value="AG" title="AG" >Antigua and Barbuda</option>
+            <option value="AL" title="AL" >Albania</option>
+            <option value="AM" title="AM" >Armenia</option>
+            <option value="AO" title="AO" >Angola</option>
+            <option value="AR" title="AR" >Argentina</option>
+            <option value="AT" title="AT" >Austria</option>
+            <option value="AU" title="AU" >Australia</option>
+            <option value="AW" title="AW" >Aruba</option>
+            <option value="AZ" title="AZ" >Azerbaijan</option>
+            <option value="BA" title="BA" >Bosnia and Herzegovina</option>
+            <option value="BB" title="BB" >Barbados</option>
+            <option value="BD" title="BD" >Bangladesh</option>
+            <option value="BE" title="BE" >Belgium</option>
+            <option value="BF" title="BF" >Burkina Faso</option>
+            <option value="BG" title="BG" >Bulgaria</option>
+            <option value="BH" title="BH" >Bahrain</option>
+            <option value="BI" title="BI" >Burundi</option>
+            <option value="BJ" title="BJ" >Benin</option>
+            <option value="BM" title="BM" >Bermuda</option>
+            <option value="BN" title="BN" >Brunei</option>
+            <option value="BO" title="BO" >Bolivia</option>
+            <option value="BR" title="BR" >Brazil</option>
+            <option value="BS" title="BS" >Bahamas</option>
+            <option value="BT" title="BT" >Bhutan</option>
+            <option value="BW" title="BW" >Botswana</option>
+            <option value="BY" title="BY" >Belarus</option>
+            <option value="BZ" title="BZ" >Belize</option>
+            <option value="CA" title="CA" >Canada</option>
+            <option value="CD" title="CD" >Democratic Republic of the Congo</option>
+            <option value="CF" title="CF" >Central African Republic</option>
+            <option value="CG" title="CG" >Republic of the Congo</option>
+            <option value="CH" title="CH" >Switzerland</option>
+            <option value="CL" title="CL" >Chile</option>
+            <option value="CM" title="CM" >Cameroon</option>
+            <option value="CN" title="CN" >China</option>
+            <option value="CO" title="CO" >Colombia</option>
+            <option value="CR" title="CR" >Costa Rica</option>
+            <option value="CU" title="CU" >Cuba</option>
+            <option value="CV" title="CV" >Cape Verde</option>
+            <option value="CY" title="CY" >Cyprus</option>
+            <option value="CZ" title="CZ" >Czech Republic</option>
+            <option value="DE" title="DE" >Germany</option>
+            <option value="DJ" title="DJ" >Djibouti</option>
+            <option value="DK" title="DK" >Denmark</option>
+            <option value="DM" title="DM" >Dominica</option>
+            <option value="DO" title="DO" >Dominican Republic</option>
+            <option value="DZ" title="DZ" >Algeria</option>
+            <option value="EC" title="EC" >Ecuador</option>
+            <option value="EE" title="EE" >Estonia</option>
+            <option value="EG" title="EG" >Egypt</option>
+            <option value="ER" title="ER" >Eritrea</option>
+            <option value="ES" title="ES" >Spain</option>
+            <option value="ET" title="ET" >Ethiopia</option>
+            <option value="FI" title="FI" >Finland</option>
+            <option value="FJ" title="FJ" >Fiji</option>
+            <option value="FK" title="FK" >Falkland Islands</option>
+            <option value="FM" title="FM" >Micronesia</option>
+            <option value="FO" title="FO" >Faroe Islands</option>
+            <option value="FR" title="FR" >France</option>
+            <option value="GA" title="GA" >Gabon</option>
+            <option value="GB" title="GB" >United Kingdom</option>
+            <option value="GD" title="GD" >Grenada</option>
+            <option value="GE" title="GE" >Georgia</option>
+            <option value="GH" title="GH" >Ghana</option>
+            <option value="GI" title="GI" >Gibraltar</option>
+            <option value="GM" title="GM" >Gambia</option>
+            <option value="GN" title="GN" >Guinea</option>
+            <option value="GQ" title="GQ" >Equatorial Guinea</option>
+            <option value="GR" title="GR" >Greece</option>
+            <option value="GT" title="GT" >Guatemala</option>
+            <option value="GW" title="GW" >Guinea-Bissau</option>
+            <option value="GY" title="GY" >Guyana</option>
+            <option value="HK" title="HK" >Hong Kong</option>
+            <option value="HN" title="HN" >Honduras</option>
+            <option value="HR" title="HR" >Croatia</option>
+            <option value="HT" title="HT" >Haiti</option>
+            <option value="HU" title="HU" >Hungary</option>
+            <option value="ID" title="ID" >Indonesia</option>
+            <option value="IE" title="IE" >Ireland</option>
+            <option value="IL" title="IL" >Israel</option>
+            <option value="IN" title="IN" >India</option>
+            <option value="IQ" title="IQ" >Iraq</option>
+            <option value="IR" title="IR" >Iran</option>
+            <option value="IS" title="IS" >Iceland</option>
+            <option value="IT" title="IT" >Italy</option>
+            <option value="JM" title="JM" >Jamaica</option>
+            <option value="JO" title="JO" >Jordan</option>
+            <option value="JP" title="JP" >Japan</option>
+            <option value="KE" title="KE" >Kenya</option>
+            <option value="KG" title="KG" >Kyrgyzstan</option>
+            <option value="KH" title="KH" >Cambodia</option>
+            <option value="KI" title="KI" >Kiribati</option>
+            <option value="KM" title="KM" >Comoros</option>
+            <option value="KN" title="KN" >Saint Kitts and Nevis</option>
+            <option value="KP" title="KP" >North Korea</option>
+            <option value="KR" title="KR" >South Korea</option>
+            <option value="KW" title="KW" >Kuwait</option>
+            <option value="KY" title="KY" >Cayman Islands</option>
+            <option value="KZ" title="KZ" >Kazakhstan</option>
+            <option value="LA" title="LA" >Laos</option>
+            <option value="LB" title="LB" >Lebanon</option>
+            <option value="LC" title="LC" >Saint Lucia</option>
+            <option value="LI" title="LI" >Liechtenstein</option>
+            <option value="LK" title="LK" >Sri Lanka</option>
+            <option value="LR" title="LR" >Liberia</option>
+            <option value="LS" title="LS" >Lesotho</option>
+            <option value="LT" title="LT" >Lithuania</option>
+            <option value="LU" title="LU" >Luxembourg</option>
+            <option value="LV" title="LV" >Latvia</option>
+            <option value="LY" title="LY" >Libya</option>
+            <option value="MA" title="MA" >Morocco</option>
+            <option value="MC" title="MC" >Monaco</option>
+            <option value="MD" title="MD" >Moldova</option>
+            <option value="ME" title="ME" >Montenegro</option>
+            <option value="MG" title="MG" >Madagascar</option>
+            <option value="MK" title="MK" >Macedonia</option>
+            <option value="ML" title="ML" >Mali</option>
+            <option value="MM" title="MM" >Myanmar</option>
+            <option value="MN" title="MN" >Mongolia</option>
+            <option value="MO" title="MO" >Macao</option>
+            <option value="MR" title="MR" >Mauritania</option>
+            <option value="MT" title="MT" >Malta</option>
+            <option value="MU" title="MU" >Mauritius</option>
+            <option value="MV" title="MV" >Maldives</option>
+            <option value="MW" title="MW" >Malawi</option>
+            <option value="MX" title="MX" >Mexico</option>
+            <option value="MY" title="MY" >Malaysia</option>
+            <option value="MZ" title="MZ" >Mozambique</option>
+            <option value="NA" title="NA" >Namibia</option>
+            <option value="NE" title="NE" >Niger</option>
+            <option value="NG" title="NG" >Nigeria</option>
+            <option value="NI" title="NI" >Nicaragua</option>
+            <option value="NL" title="NL" >Netherlands</option>
+            <option value="NO" title="NO" >Norway</option>
+            <option value="NP" title="NP" >Nepal</option>
+            <option value="NR" title="NR" >Nauru</option>
+            <option value="NZ" title="NZ" >New Zealand</option>
+            <option value="OM" title="OM" >Oman</option>
+            <option value="PA" title="PA" >Panama</option>
+            <option value="PE" title="PE" >Peru</option>
+            <option value="PG" title="PG" >Papua New Guinea</option>
+            <option value="PH" title="PH" >Philippines</option>
+            <option value="PK" title="PK" >Pakistan</option>
+            <option value="PL" title="PL" >Poland</option>
+            <option value="PR" title="PR" >Puerto Rico</option>
+            <option value="PS" title="PS" >Palestine</option>
+            <option value="PT" title="PT" >Portugal</option>
+            <option value="PW" title="PW" >Palau</option>
+            <option value="PY" title="PY" >Paraguay</option>
+            <option value="QA" title="QA" >Qatar</option>
+            <option value="RO" title="RO" >Romania</option>
+            <option value="RS" title="RS" >Serbia</option>
+            <option value="RU" title="RU" >Russia</option>
+            <option value="RW" title="RW" >Rwanda</option>
+            <option value="SA" title="SA" >Saudi Arabia</option>
+            <option value="SB" title="SB" >Solomon Islands</option>
+            <option value="SC" title="SC" >Seychelles</option>
+            <option value="SD" title="SD" >Sudan</option>
+            <option value="SE" title="SE" >Sweden</option>
+            <option value="SG" title="SG" >Singapore</option>
+            <option value="SI" title="SI" >Slovenia</option>
+            <option value="SK" title="SK" >Slovak Republic</option>
+            <option value="SL" title="SL" >Sierra Leone</option>
+            <option value="SM" title="SM" >San Marino</option>
+            <option value="SN" title="SN" >Senegal</option>
+            <option value="SO" title="SO" >Somalia</option>
+            <option value="SR" title="SR" >Suriname</option>
+            <option value="ST" title="ST" >Sao Tome and Principe</option>
+            <option value="SV" title="SV" >El Salvador</option>
+            <option value="SY" title="SY" >Syria</option>
+            <option value="SZ" title="SZ" >Swaziland</option>
+            <option value="TD" title="TD" >Chad</option>
+            <option value="TG" title="TG" >Togo</option>
+            <option value="TH" title="TH" >Thailand</option>
+            <option value="TJ" title="TJ" >Tajikistan</option>
+            <option value="TM" title="TM" >Turkmenistan</option>
+            <option value="TN" title="TN" >Tunisia</option>
+            <option value="TO" title="TO" >Tonga</option>
+            <option value="TR" title="TR" >Turkey</option>
+            <option value="TT" title="TT" >Trinidad and Tobago</option>
+            <option value="TV" title="TV" >Tuvalu</option>
+            <option value="TW" title="TW" >Taiwan</option>
+            <option value="TZ" title="TZ" >Tanzania</option>
+            <option value="UA" title="UA" >Ukraine</option>
+            <option value="UG" title="UG" >Uganda</option>
+            <option value="UY" title="UY" >Uruguay</option>
+            <option value="UZ" title="UZ" >Uzbekistan</option>
+            <option value="VC" title="VC" >Saint Vincent And The Grenadine</option>
+            <option value="VE" title="VE" >Venezuela</option>
+            <option value="VG" title="VG" >British Virgin Islands</option>
+            <option value="VN" title="VN" >Vietnam</option>
+            <option value="VU" title="VU" >Vanuatu</option>
+            <option value="WF" title="WF" >Wallis and Futuna</option>
+            <option value="WS" title="WS" >Western Samoa</option>
+            <option value="YE" title="YE" >Yemen</option>
+            <option value="ZA" title="ZA" >South Africa</option>
+            <option value="ZM" title="ZM" >Zambia</option>
+            <option value="ZW" title="ZW" >Zimbabwe</option>
+        </select>
+        <span class="huobi"></span>
+    </div>
+    <script type="text/javascript" src="js/select_gj.min.js"></script>
+    <script src="js/select2_1.js"></script>
+    <script src="js/huobi.js"></script>
+    <script>
+        let country = 'CN'
+			let countryHb = '¥'
+			var selectCountry,selectHb;
+			
+			$(".fastbannerform__country").find('option[value='+country+']').attr("selected",true);
+			$(".huobi").text(countryHb)
+
+			$(".fastbannerform__country").on('change',function(){
+				$(".huobi").text()
+				for (let i = 0; i < huobi.length; i++) {
+					if (huobi[i].code == $(this).val()) {
+						hb = huobi[i].symbol_native
+						$(".huobi").text(huobi[i].symbol_native)
+					}
+				}
+				selectCountry = $(this).val()
+			})
+    </script>
+</body>
+
+</html>
